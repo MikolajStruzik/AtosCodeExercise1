@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtosCodeExercise1", "AtosCodeExercise1\AtosCodeExercise1.csproj", "{29C54311-FEEE-497D-A2EE-47BAC3B21E0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtosCodeExercise1.Tests", "AtosCodeExercise1.Tests\AtosCodeExercise1.Tests.csproj", "{372A3104-AAA1-405F-B20F-EC6298DED800}"
+	ProjectSection(ProjectDependencies) = postProject
+		{29C54311-FEEE-497D-A2EE-47BAC3B21E0D} = {29C54311-FEEE-497D-A2EE-47BAC3B21E0D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29C54311-FEEE-497D-A2EE-47BAC3B21E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C54311-FEEE-497D-A2EE-47BAC3B21E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C54311-FEEE-497D-A2EE-47BAC3B21E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C54311-FEEE-497D-A2EE-47BAC3B21E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{372A3104-AAA1-405F-B20F-EC6298DED800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372A3104-AAA1-405F-B20F-EC6298DED800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372A3104-AAA1-405F-B20F-EC6298DED800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372A3104-AAA1-405F-B20F-EC6298DED800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {866DBDDD-E66B-48AC-B053-252E6BFD8BBD}
+	EndGlobalSection
+EndGlobal
