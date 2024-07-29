@@ -13,7 +13,6 @@ namespace AtosCodeExercise1.Tests
 {
     public class CustomersControllerTests
     {
-        
         private readonly Mock<ICustomerService> _mockCustomerService;
         private readonly Mock<ILogger<CustomersController>> _mockLogger;
         private readonly CustomersController _controller;
@@ -58,7 +57,6 @@ namespace AtosCodeExercise1.Tests
         public async Task PostCustomer_CreatesCustomer_WhenCustomerDoesNotExist()
         {
             // Arrange
-           
             var customer = new Customer { Id = 1, FirstName = "John", LastName = "Smith" };
 
             // Act
@@ -69,7 +67,6 @@ namespace AtosCodeExercise1.Tests
             Assert.Equal("PostCustomer", actionResult.ActionName);
             Assert.Equal(customer.Id, ((Customer)actionResult.Value).Id);
 
-            // Verify customer is added
             using (var context = new CustomerDbContext(_dbContextOptions))
             {
                 Assert.True(context.Customers.Any(c => c.Id == customer.Id));
@@ -91,7 +88,6 @@ namespace AtosCodeExercise1.Tests
             Assert.Equal("PostCustomer", actionResult.ActionName);
             Assert.Equal(customer.Id, ((Customer)actionResult.Value).Id);
 
-            // Verify customer is added
             using (var context = new CustomerDbContext(_dbContextOptions))
             {
                 Assert.True(context.Customers.Any(c => c.Id == customer.Id));
@@ -142,9 +138,9 @@ namespace AtosCodeExercise1.Tests
         [Fact]
         public async Task DeleteCustomer_ReturnsNotFound_WhenCustomerDoesNotExist()
         {
+            // Arrange
             var context = new CustomerDbContext(_dbContextOptions);
             List<Customer> customers = [new Customer { Id = 999, FirstName = "XYZ", LastName = "QWE" }];
-            // Arrange
             long nonExistingId = 999;
 
             // Act
@@ -170,6 +166,5 @@ namespace AtosCodeExercise1.Tests
             var actionResult = Assert.IsType<NoContentResult>(result);
             Assert.False(context.Customers.Any(c => c.Id == customer.Id));
         }
-
     }
 }
